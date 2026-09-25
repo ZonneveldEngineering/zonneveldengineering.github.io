@@ -269,6 +269,132 @@ const videos = [
     "endDate": "2026-08-31",
     "orientation": "landscape",
     "aspectRatio": "16/9"
+  },
+  {
+    "id": "SOYKykaYTfI",
+    "title": {
+      "en": "B22",
+      "pt": "B22",
+      "es": "B22",
+      "de": "B22"
+    },
+    "description": {
+      "en": "Secondary steel installation at B22: anode cage, external ladder, boat landing, suspended internal platform and external concrete platform.",
+      "pt": "Instalação de estruturas secundárias em B22: gaiola de anodos, escada externa, plataforma de acesso, plataforma interna suspensa e plataforma externa de concreto.",
+      "es": "Instalación de estructuras secundarias en B22: jaula de ánodos, escalera externa, plataforma de acceso, plataforma interna suspendida y plataforma externa de concreto.",
+      "de": "Installation von Sekundärstahl an B22: Anodenkäfig, Außenleiter, Bootsanleger, abgehängte Innenplattform und äußere Betonplattform."
+    },
+    "loadout": 6,
+    "executionHours": null,
+    "startDate": "2026-09-15",
+    "endDate": "2026-09-15",
+    "orientation": "portrait",
+    "aspectRatio": "9/16"
+  },
+  {
+    "id": "GbnbULMGcYM",
+    "title": {
+      "en": "F22",
+      "pt": "F22",
+      "es": "F22",
+      "de": "F22"
+    },
+    "description": {
+      "en": "Secondary steel installation at F22: anode cage, external ladder, boat landing, suspended internal platform and external concrete platform.",
+      "pt": "Instalação de estruturas secundárias em F22: gaiola de anodos, escada externa, plataforma de acesso, plataforma interna suspensa e plataforma externa de concreto.",
+      "es": "Instalación de estructuras secundarias en F22: jaula de ánodos, escalera externa, plataforma de acceso, plataforma interna suspendida y plataforma externa de concreto.",
+      "de": "Installation von Sekundärstahl an F22: Anodenkäfig, Außenleiter, Bootsanleger, abgehängte Innenplattform und äußere Betonplattform."
+    },
+    "loadout": 6,
+    "executionHours": null,
+    "startDate": "2026-09-15",
+    "endDate": "2026-09-16",
+    "orientation": "portrait",
+    "aspectRatio": "9/16"
+  },
+  {
+    "id": "XAR8R_NObrE",
+    "title": {
+      "en": "ACSLT · Day shift",
+      "pt": "ACSLT · Turno diurno",
+      "es": "ACSLT · Turno diurno",
+      "de": "ACSLT · Tagschicht"
+    },
+    "description": {
+      "en": "ACSLT rescue drill at the Port of Tyne, including team preparation, controlled lowering of the rescue dummy and recovery at deck level.",
+      "pt": "Exercício de resgate ACSLT no Porto de Tyne, com preparação da equipe, descida controlada do manequim e resgate no convés.",
+      "es": "Simulacro de rescate ACSLT en el Puerto de Tyne, con preparación del equipo, descenso controlado del maniquí y rescate en cubierta.",
+      "de": "ACSLT-Rettungsübung im Port of Tyne mit Vorbereitung des Teams, kontrolliertem Ablassen der Übungspuppe und Bergung an Deck."
+    },
+    "loadout": 7,
+    "executionHours": null,
+    "startDate": "2026-09-19",
+    "endDate": "2026-09-19",
+    "orientation": "landscape",
+    "aspectRatio": "16/9"
+  },
+  {
+    "id": "SJTmOg5MUyM",
+    "title": {
+      "en": "ACSLT · Night shift",
+      "pt": "ACSLT · Turno noturno",
+      "es": "ACSLT · Turno nocturno",
+      "de": "ACSLT · Nachtschicht"
+    },
+    "description": {
+      "en": "Second rescue drill: response-team preparation, controlled lowering of the dummy from the tool and tower, recovery and demobilisation.",
+      "pt": "Segundo exercício de resgate: preparação da equipe, descida controlada do manequim da ferramenta e da torre, resgate e desmobilização.",
+      "es": "Segundo simulacro de rescate: preparación del equipo, descenso controlado del maniquí desde la herramienta y la torre, rescate y desmovilización.",
+      "de": "Zweite Rettungsübung: Vorbereitung des Teams, kontrolliertes Ablassen der Puppe von Werkzeug und Turm, Bergung und Demobilisierung."
+    },
+    "loadout": 7,
+    "executionHours": null,
+    "startDate": "2026-09-19",
+    "endDate": "2026-09-19",
+    "orientation": "landscape",
+    "aspectRatio": "16/9"
+  },
+  {
+    "id": "IVtq1V2OklM",
+    "title": {
+      "en": "ACSLT · Day vs Night",
+      "pt": "ACSLT · Diurno vs Noturno",
+      "es": "ACSLT · Diurno vs Nocturno",
+      "de": "ACSLT · Tag vs Nacht"
+    },
+    "description": {
+      "en": "Side-by-side comparison of the two rescue drills, synchronised at the start of each exercise.",
+      "pt": "Comparação lado a lado dos dois exercícios de resgate, sincronizados no início de cada exercício.",
+      "es": "Comparación en paralelo de los dos simulacros de rescate, sincronizados al inicio de cada ejercicio.",
+      "de": "Direkter Vergleich der beiden Rettungsübungen, jeweils auf den Übungsbeginn synchronisiert."
+    },
+    "loadout": 7,
+    "executionHours": null,
+    "startDate": "2026-09-19",
+    "endDate": "2026-09-19",
+    "orientation": "landscape",
+    "aspectRatio": "16/9"
+  },
+  {
+    "id": "Vbvd7_pdyXU",
+    "title": {
+      "en": "ACSLT Drill · Night shift & POV",
+      "pt": "Exercício ACSLT · Turno da noite e POV",
+      "es": "Simulacro ACSLT · Turno nocturno y POV",
+      "de": "ACSLT-Übung · Nachtschicht & POV"
+    },
+    "description": {
+      "en": "Night-shift drill combining a fixed overview with point-of-view footage from Field Engineer Todor Sanev. Preparation, lowering and recovery shown from complementary perspectives.",
+      "pt": "Exercício do turno da noite que combina uma câmera fixa com a visão em primeira pessoa do Field Engineer Todor Sanev. Preparação, descida e resgate vistos por perspectivas complementares.",
+      "es": "Simulacro del turno nocturno que combina una cámara fija con la perspectiva en primera persona del Field Engineer Todor Sanev. Preparación, descenso y rescate desde perspectivas complementarias.",
+      "de": "Übung der Nachtschicht mit fester Übersichtskamera und Aufnahmen aus der Ich-Perspektive des Field Engineers Todor Sanev. Vorbereitung, Ablassen und Bergung aus ergänzenden Blickwinkeln."
+    },
+    "loadout": 7,
+    "executionHours": null,
+    "startDate": "2026-09-19",
+    "endDate": "2026-09-19",
+    "orientation": "landscape",
+    "aspectRatio": "16/9"
   }
 ];
 
