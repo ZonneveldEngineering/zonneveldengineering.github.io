@@ -8234,8 +8234,9 @@
     }
     function updateMousePosition(curElement, event) {
       var offset = calculateOffset(curElement, event);
-      p.mouseX = event.pageX - offset.X;
-      p.mouseY = event.pageY - offset.Y
+      // Zonneveld: map CSS-scaled canvas coordinates to the original drawing size.
+      p.mouseX = (event.pageX - offset.X) * curElement.width / (curElement.clientWidth || curElement.width);
+      p.mouseY = (event.pageY - offset.Y) * curElement.height / (curElement.clientHeight || curElement.height)
     }
     function addTouchEventOffset(t) {
       var offset = calculateOffset(t.changedTouches[0].target, t.changedTouches[0]),

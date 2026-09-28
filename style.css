@@ -56,3 +56,12 @@ html body :is(h1,h2,h3,h4,h5,h6,.brand-text) { letter-spacing: normal; }
 .home-manufactura-image{display:block;overflow:hidden}.home-manufactura-image img{display:block;width:100%;height:auto}
 @media(max-width:650px){.home-manufactura{grid-template-columns:minmax(0,1fr) 110px;gap:24px;padding-top:30px;padding-bottom:34px;align-items:start}.home-manufactura h2{font-size:30px}.home-manufactura p{font-size:14px}.home-manufactura-link{font-size:13px;gap:8px}.home-manufactura-image{margin-top:22px}}
 @media(max-width:420px){.home-manufactura{grid-template-columns:1fr}.home-manufactura-image{width:140px;margin-top:0}.home-manufactura-copy{max-width:100%}}
+
+/* A quiet three-image invitation. */
+.home-manufactura{grid-template-columns:minmax(0,1fr) auto;gap:36px}.home-manufactura-images{display:flex;gap:12px}.home-manufactura-images .home-manufactura-image{width:112px;height:112px;margin:0;background:#eeeae1}.home-manufactura-images img{width:100%;height:100%;object-fit:cover;transition:transform .25s}.home-manufactura-images a:hover img{transform:scale(1.04)}
+@media(max-width:900px){.home-manufactura{grid-template-columns:1fr}.home-manufactura-images .home-manufactura-image{width:100px;height:100px}}@media(max-width:390px){.home-manufactura-images{gap:8px}.home-manufactura-images .home-manufactura-image{width:88px;height:88px}}@media(prefers-reduced-motion:reduce){.home-manufactura-images img{transition:none}}
+
+.home-manufactura-images .home-cim-crop{transform:scale(1.65);object-position:50% 43%}.home-manufactura-images a:hover .home-cim-crop{transform:scale(1.7)}
+
+/* Keep the Manufactura invitation in the paragraph flow. */
+.home-manufactura-copy p{margin-bottom:0;max-width:100%}.home-manufactura-copy .home-manufactura-link{display:inline;white-space:normal;margin-left:.25em}.home-manufactura-link span{white-space:nowrap}
