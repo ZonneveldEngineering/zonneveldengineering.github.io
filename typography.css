@@ -1,0 +1,24 @@
+/* Shared typography: Daniel's Adobe Fonts web project. */
+:root{--sans:"mr-eaves-xl-sans",Arial,sans-serif;--font-sans:"mr-eaves-xl-sans",Arial,sans-serif;--font-sans-default:"mr-eaves-xl-sans",Arial,sans-serif;--ui-sans:"mr-eaves-xl-modern",Arial,sans-serif;--label-sans:"mr-eaves-xl-modern-narrow",Arial,sans-serif}
+body{font-family:var(--sans);font-weight:400;font-synthesis:none;font-kerning:normal}
+button,input,select,textarea{font-family:var(--ui-sans)}
+body[data-page]{font-size:18px}
+nav,.breadcrumbs,.language-picker,select{font-family:var(--ui-sans);font-size:16px;font-weight:400}
+.eyebrow{font-family:var(--label-sans);font-weight:700;font-size:14px;letter-spacing:.12em}
+.intro,.manufacture-intro .intro{font-family:var(--sans);font-weight:300;font-size:24px;line-height:1.5}
+.hero-heading>p:last-child{font-family:var(--sans);font-size:24px;font-weight:200}
+.service-grid p,.visual-services .service-card p,.service-detail ul,.manuf-card p{font-family:var(--sans);font-size:18px;line-height:1.55;font-weight:400}
+.company-section p:last-child{font-family:var(--sans);font-size:22px;font-weight:300;line-height:1.55}
+.service-scope,.visual-caption p,.collection-section>p{font-family:var(--sans);font-size:18px;line-height:1.65}
+strong,b{font-weight:700}
+.button,.reference-card a,.home-manufactura-link,.text-link{font-family:var(--ui-sans);font-weight:700}
+.reference-card a,.home-manufactura-link,.collection-end{font-size:16px}
+.home-manufactura p{font-family:var(--sans);font-size:19px;font-weight:300;line-height:1.5}
+.carousel-count{font-family:var(--ui-sans);font-size:15px;font-weight:300}
+.carousel-controls button{font-family:var(--ui-sans);font-weight:700}
+.collection-search input{font-family:var(--sans);font-size:20px;font-weight:300}
+.collection-search>span{font-family:var(--label-sans);font-size:15px;font-weight:700}
+footer{font-family:var(--ui-sans)}
+/* Standalone Pétala pages share the same sans-serif family. */
+body:not([data-page]),body:not([data-page]) :is(button,input,select,textarea,h1,h2,h3,h4,label,summary){font-family:var(--sans)}
+@media(max-width:700px){.intro,.manufacture-intro .intro,.hero-heading>p:last-child{font-size:22px;font-weight:300}.company-section p:last-child{font-size:20px}.home-manufactura p{font-size:18px}.home-manufactura-link{font-size:16px}}
