@@ -6,6 +6,50 @@ de:{nav:['Erfahrung','Über mich','Kontakt'],skip:'Zum Inhalt',tag:'Ingenieurwes
 };
 
 const videos = [
+{
+  "id": "huK7FUDGk1A",
+  "loadout": 7,
+  "startDate": "2026-09-17",
+  "endDate": "2026-09-18",
+  "title": {
+    "en": "North Sea to River Tyne",
+    "pt": "Do Mar do Norte ao Rio Tyne",
+    "es": "Del Mar del Norte al río Tyne",
+    "de": "Von der Nordsee zum River Tyne"
+  },
+  "description": {
+    "en": "WIND ORCA sailing into the River Tyne, followed by positioning, jacking-up, gangway installation and sunrise in port.",
+    "pt": "Navegação do WIND ORCA até o Rio Tyne, seguida de posicionamento, elevação do navio, instalação da passarela e amanhecer no porto.",
+    "es": "Navegación del WIND ORCA hacia el río Tyne, seguida de posicionamiento, elevación del buque, instalación de la pasarela y amanecer en el puerto.",
+    "de": "Fahrt der WIND ORCA in den River Tyne, anschließend Positionierung, Aufjacken, Gangway-Installation und Sonnenaufgang im Hafen."
+  },
+  "executionHours": null,
+  "orientation": "landscape",
+  "aspectRatio": "16/9",
+  "featuredFirst": true
+},
+{
+  "id": "eY8ro0WinEE",
+  "loadout": 6,
+  "startDate": "2026-09-03",
+  "endDate": "2026-09-03",
+  "title": {
+    "en": "Arriving at Port of Tyne",
+    "pt": "Chegada ao Porto de Tyne",
+    "es": "Llegada al Puerto de Tyne",
+    "de": "Ankunft im Port of Tyne"
+  },
+  "description": {
+    "en": "WIND ORCA sailing from the North Sea into the River Tyne, arriving, positioning and jacking-up at the Port of Tyne.",
+    "pt": "Navegação do WIND ORCA desde o Mar do Norte até o Rio Tyne, com chegada, posicionamento e elevação do navio no Porto de Tyne.",
+    "es": "Navegación del WIND ORCA desde el Mar del Norte hasta el río Tyne, con llegada, posicionamiento y elevación del buque en el Puerto de Tyne.",
+    "de": "Fahrt der WIND ORCA von der Nordsee in den River Tyne mit Ankunft, Positionierung und Aufjacken im Port of Tyne."
+  },
+  "executionHours": null,
+  "orientation": "landscape",
+  "aspectRatio": "16/9",
+  "featuredFirst": true
+},
   {
     "id": "bZ93KakCtok",
     "title": {
