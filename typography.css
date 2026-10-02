@@ -22,3 +22,9 @@ footer{font-family:var(--ui-sans)}
 /* Standalone Pétala pages share the same sans-serif family. */
 body:not([data-page]),body:not([data-page]) :is(button,input,select,textarea,h1,h2,h3,h4,label,summary){font-family:var(--sans)}
 @media(max-width:700px){.intro,.manufacture-intro .intro,.hero-heading>p:last-child{font-size:22px;font-weight:300}.company-section p:last-child{font-size:20px}.home-manufactura p{font-size:18px}.home-manufactura-link{font-size:16px}}
+
+/* 02/10/2026: textos só em maiúsculas viram versaletes (caixa alta na altura da caixa baixa).
+   Mr Eaves XL (kit Adobe) e a EB Garamond hospedada no site (/fonts) têm c2sc/smcp. */
+.caps{font-variant-caps:all-small-caps;letter-spacing:.05em}
+:is(h1,h2,h3,h4,h5,h6) .caps{letter-spacing:.03em}
+.eyebrow,.manufacture-intro .breadcrumbs.eyebrow{text-transform:none;font-variant-caps:all-small-caps;font-size:19px;letter-spacing:.1em}
