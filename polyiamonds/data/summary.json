@@ -1,0 +1,250 @@
+[
+  {
+    "n": 1,
+    "count": 1,
+    "categories": {
+      "rot": 1,
+      "list": 1
+    },
+    "tilings": 1
+  },
+  {
+    "n": 2,
+    "count": 1,
+    "categories": {
+      "trans": 1,
+      "list": 1
+    },
+    "tilings": 1
+  },
+  {
+    "n": 3,
+    "count": 1,
+    "categories": {
+      "rot": 1,
+      "list": 1
+    },
+    "tilings": 1
+  },
+  {
+    "n": 4,
+    "count": 3,
+    "categories": {
+      "trans": 2,
+      "list": 3,
+      "rot": 1
+    },
+    "tilings": 3
+  },
+  {
+    "n": 5,
+    "count": 4,
+    "categories": {
+      "rot": 4
+    },
+    "tilings": 4
+  },
+  {
+    "n": 6,
+    "count": 12,
+    "categories": {
+      "trans": 8,
+      "list": 12,
+      "rot": 4,
+      "1-morphic": 2
+    },
+    "tilings": 14
+  },
+  {
+    "n": 7,
+    "count": 24,
+    "categories": {
+      "rot": 21,
+      "list": 24,
+      "nontile": 1,
+      "iso": 2
+    },
+    "tilings": 23
+  },
+  {
+    "n": 8,
+    "count": 66,
+    "categories": {
+      "trans": 24,
+      "list": 66,
+      "rot": 32,
+      "iso": 10,
+      "1-morphic": 2
+    },
+    "tilings": 68
+  },
+  {
+    "n": 9,
+    "count": 160,
+    "categories": {
+      "rot": 111,
+      "list": 160,
+      "nontile": 20,
+      "iso": 22,
+      "1-morphic": 18,
+      "2-morphic": 8,
+      "aniso": 6,
+      "3-morphic": 2,
+      "holes": 1
+    },
+    "tilings": 179
+  },
+  {
+    "n": 10,
+    "count": 448,
+    "categories": {
+      "trans": 62,
+      "list": 448,
+      "rot": 200,
+      "2-morphic": 15,
+      "nontile": 103,
+      "iso": 54,
+      "1-morphic": 62,
+      "holes": 4,
+      "aniso": 25,
+      "3-morphic": 3
+    },
+    "tilings": 442
+  },
+  {
+    "n": 11,
+    "count": 1186,
+    "categories": {
+      "rot": 462,
+      "list": 1186,
+      "nontile": 594,
+      "1-morphic": 284,
+      "2-morphic": 64,
+      "aniso": 53,
+      "3-morphic": 8,
+      "iso": 52,
+      "holes": 25,
+      "4-morphic": 1
+    },
+    "tilings": 1007
+  },
+  {
+    "n": 12,
+    "count": 3334,
+    "categories": {
+      "trans": 291,
+      "list": 3334,
+      "rot": 1162,
+      "nontile": 1192,
+      "iso": 534,
+      "1-morphic": 491,
+      "2-morphic": 90,
+      "3-morphic": 12,
+      "holes": 108,
+      "aniso": 47,
+      "4-morphic": 1
+    },
+    "tilings": 2745
+  },
+  {
+    "n": 13,
+    "count": 9235,
+    "categories": {
+      "rot": 1875,
+      "list": 9235,
+      "nontile": 6290,
+      "2-morphic": 249,
+      "3-morphic": 30,
+      "iso": 523,
+      "aniso": 97,
+      "holes": 450,
+      "4-morphic": 7
+    },
+    "tilings": 3111
+  },
+  {
+    "n": 14,
+    "count": 301,
+    "categories": {
+      "5-morphic": 2,
+      "3-morphic": 16,
+      "aniso": 281,
+      "4-morphic": 2
+    },
+    "tilings": 347
+  },
+  {
+    "n": 15,
+    "count": 294,
+    "categories": {
+      "aniso": 280,
+      "3-morphic": 14
+    },
+    "tilings": 322
+  },
+  {
+    "n": 16,
+    "count": 397,
+    "categories": {
+      "4-morphic": 14,
+      "aniso": 343,
+      "5-morphic": 2,
+      "3-morphic": 37,
+      "6-morphic": 1
+    },
+    "tilings": 526
+  },
+  {
+    "n": 17,
+    "count": 380,
+    "categories": {
+      "aniso": 345,
+      "3-morphic": 34,
+      "5-morphic": 1
+    },
+    "tilings": 452
+  },
+  {
+    "n": 18,
+    "count": 1482,
+    "categories": {
+      "aniso": 1367,
+      "4-morphic": 20,
+      "3-morphic": 93,
+      "5-morphic": 2
+    },
+    "tilings": 1736
+  },
+  {
+    "n": 19,
+    "count": 686,
+    "categories": {
+      "3-morphic": 61,
+      "aniso": 619,
+      "4-morphic": 6
+    },
+    "tilings": 826
+  },
+  {
+    "n": 20,
+    "count": 2676,
+    "categories": {
+      "4-morphic": 39,
+      "aniso": 2478,
+      "3-morphic": 147,
+      "5-morphic": 10,
+      "6-morphic": 2
+    },
+    "tilings": 3137
+  },
+  {
+    "n": 21,
+    "count": 1613,
+    "categories": {
+      "aniso": 1504,
+      "3-morphic": 107,
+      "4-morphic": 2
+    },
+    "tilings": 1833
+  }
+]

@@ -1,0 +1,972 @@
+{
+  "source": {
+    "author": "Robert Reid",
+    "title": "The Gentle Art of Filling Space",
+    "section": "Polyamonds, Patterns 1–40",
+    "pdfPages": [
+      11,
+      90
+    ]
+  },
+  "items": [
+    {
+      "id": "P05-00003",
+      "n": 5,
+      "code": "2134551",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 15,
+          "figure": 3
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P06-00007",
+      "n": 6,
+      "code": "23316654",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 17,
+          "figure": 4
+        },
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 31,
+          "figure": 11
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P06-00002",
+      "n": 6,
+      "code": "23266644",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 19,
+          "figure": 5
+        },
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 21,
+          "figure": 6
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P06-00003",
+      "n": 6,
+      "code": "26234466",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 23,
+          "figure": 7
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P07-00003",
+      "n": 7,
+      "code": "243545111",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 25,
+          "figure": 8
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P07-00013",
+      "n": 7,
+      "code": "211653534",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 27,
+          "figure": 9
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P07-00021",
+      "n": 7,
+      "code": "231266454",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 29,
+          "figure": 10
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P07-00010",
+      "n": 7,
+      "code": "245456212",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 31,
+          "figure": 11
+        },
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 39,
+          "figure": 15
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P07-00020",
+      "n": 7,
+      "code": "233545116",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 31,
+          "figure": 11
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P07-00018",
+      "n": 7,
+      "code": "235456262",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 31,
+          "figure": 11
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P07-00014",
+      "n": 7,
+      "code": "245661243",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 31,
+          "figure": 11
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P07-00017",
+      "n": 7,
+      "code": "235466124",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 31,
+          "figure": 11
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P07-00022",
+      "n": 7,
+      "code": "235446621",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 31,
+          "figure": 11
+        },
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 33,
+          "figure": 12
+        },
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 35,
+          "figure": 13
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P07-00024",
+      "n": 7,
+      "code": "235451613",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 31,
+          "figure": 11
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P07-00008",
+      "n": 7,
+      "code": "2234566",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 31,
+          "figure": 11
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P05-00002",
+      "n": 5,
+      "code": "2435511",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 31,
+          "figure": 11
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P07-00007",
+      "n": 7,
+      "code": "212444651",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 31,
+          "figure": 11
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P06-00011",
+      "n": 6,
+      "code": "234561",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 31,
+          "figure": 11
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P08-00019",
+      "n": 8,
+      "code": "2324564662",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 39,
+          "figure": 15
+        },
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 41,
+          "figure": 16
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P08-00027",
+      "n": 8,
+      "code": "2445651231",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 43,
+          "figure": 17
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P08-00033",
+      "n": 8,
+      "code": "21656433",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 45,
+          "figure": 18
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P08-00036",
+      "n": 8,
+      "code": "2355611244",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 45,
+          "figure": 18
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P08-00039",
+      "n": 8,
+      "code": "2455651232",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 45,
+          "figure": 18
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P08-00005",
+      "n": 8,
+      "code": "2266456432",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 47,
+          "figure": 19
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P08-00056",
+      "n": 8,
+      "code": "2456162244",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 49,
+          "figure": 20
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P08-00059",
+      "n": 8,
+      "code": "2454615123",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 51,
+          "figure": 21
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P08-00048",
+      "n": 8,
+      "code": "2346551124",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 53,
+          "figure": 22
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P09-00095",
+      "n": 9,
+      "code": "26654244226",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 55,
+          "figure": 23
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P09-00148",
+      "n": 9,
+      "code": "24356515123",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 57,
+          "figure": 24
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P10-00313",
+      "n": 10,
+      "code": "212613345456",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 59,
+          "figure": 25
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P10-00381",
+      "n": 10,
+      "code": "2165454312",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 61,
+          "figure": 26
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P10-00216",
+      "n": 10,
+      "code": "2324556512",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 63,
+          "figure": 27
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P12-00058",
+      "n": 12,
+      "code": "224465456122",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 65,
+          "figure": 28
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "P12-01698",
+      "n": 12,
+      "code": "22113445546613",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 67,
+          "figure": 29
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "R014-713098e41ed7d6c50313",
+      "n": 14,
+      "code": "216234345561",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 71,
+          "figure": 31
+        }
+      ],
+      "tilings": [
+        {
+          "u": [
+            14,
+            0
+          ],
+          "v": [
+            5,
+            1
+          ],
+          "motifs": [
+            [
+              "612654543321",
+              5,
+              0
+            ],
+            [
+              "321345456612",
+              3,
+              0
+            ]
+          ],
+          "category": "reid-computed",
+          "source": {
+            "file": "Reconstrução geométrica do prototile · Robert Reid",
+            "page": 71,
+            "figure": 31
+          }
+        }
+      ]
+    },
+    {
+      "id": "R018-98d7e2cde1f720bade4b",
+      "n": 18,
+      "code": "222444555111",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 73,
+          "figure": 32
+        },
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 77,
+          "figure": 34
+        }
+      ],
+      "tilings": [
+        {
+          "u": [
+            9,
+            0
+          ],
+          "v": [
+            5,
+            1
+          ],
+          "motifs": [
+            [
+              "444666111333",
+              5,
+              0
+            ]
+          ],
+          "category": "reid-computed",
+          "source": {
+            "file": "Reconstrução geométrica do prototile · Robert Reid",
+            "page": 73,
+            "figure": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "R018-83341ab7cd9c68b7069d",
+      "n": 18,
+      "code": "2316566545323421",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 73,
+          "figure": 32
+        }
+      ],
+      "tilings": [
+        {
+          "u": [
+            3,
+            0
+          ],
+          "v": [
+            0,
+            3
+          ],
+          "motifs": [
+            [
+              "1265455434212316",
+              0,
+              1
+            ]
+          ],
+          "category": "reid-computed",
+          "source": {
+            "file": "Reconstrução geométrica do prototile · Robert Reid",
+            "page": 73,
+            "figure": 32
+          }
+        }
+      ]
+    },
+    {
+      "id": "R018-bd26c5ba80901d1552c2",
+      "n": 18,
+      "code": "23212434556561",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 75,
+          "figure": 33
+        }
+      ],
+      "tilings": [
+        {
+          "u": [
+            18,
+            0
+          ],
+          "v": [
+            5,
+            1
+          ],
+          "motifs": [
+            [
+              "32343121665654",
+              0,
+              0
+            ],
+            [
+              "65616454332321",
+              9,
+              0
+            ]
+          ],
+          "category": "reid-computed",
+          "source": {
+            "file": "Reconstrução geométrica do prototile · Robert Reid",
+            "page": 75,
+            "figure": 33
+          }
+        }
+      ]
+    },
+    {
+      "id": "R018-49c46738ea7b465220a3",
+      "n": 18,
+      "code": "2126561565423433",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 77,
+          "figure": 34
+        }
+      ],
+      "tilings": [
+        {
+          "u": [
+            9,
+            0
+          ],
+          "v": [
+            2,
+            2
+          ],
+          "motifs": [
+            [
+              "1615456454312322",
+              0,
+              0
+            ],
+            [
+              "2126561565423433",
+              1,
+              0
+            ]
+          ],
+          "category": "reid-computed",
+          "source": {
+            "file": "Reconstrução geométrica do prototile · Robert Reid",
+            "page": 77,
+            "figure": 34
+          }
+        }
+      ]
+    },
+    {
+      "id": "R018-c829fb6cdbb886c88ae9",
+      "n": 18,
+      "code": "23212656154543",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 79,
+          "figure": 35
+        }
+      ],
+      "tilings": [
+        {
+          "u": [
+            9,
+            0
+          ],
+          "v": [
+            5,
+            1
+          ],
+          "motifs": [
+            [
+              "61656434532321",
+              5,
+              0
+            ]
+          ],
+          "category": "reid-computed",
+          "source": {
+            "file": "Reconstrução geométrica do prototile · Robert Reid",
+            "page": 79,
+            "figure": 35
+          }
+        }
+      ]
+    },
+    {
+      "id": "P02-00001",
+      "n": 2,
+      "code": "2356",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 83,
+          "figure": 37
+        }
+      ],
+      "tilings": []
+    },
+    {
+      "id": "R072-069b301fcc5ab2308549",
+      "n": 72,
+      "code": "211115516446666133316222222613331666644653355556265643545442133333312444",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 87,
+          "figure": 39
+        }
+      ],
+      "tilings": [
+        {
+          "u": [
+            -6,
+            -6
+          ],
+          "v": [
+            -12,
+            6
+          ],
+          "motifs": [
+            [
+              "511212613235322226623113333466643555555346664333311342244445111546666664",
+              12,
+              5
+            ],
+            [
+              "222651111115622265555335644666613331622222261334342354515444422453355556",
+              17,
+              2
+            ],
+            [
+              "511112444213333331244421111551266222235553244444423556564516131666644615",
+              4,
+              0
+            ]
+          ],
+          "category": "reid",
+          "source": {
+            "file": "Robert Reid · The Gentle Art of Filling Space",
+            "page": 88,
+            "figure": 39
+          }
+        }
+      ]
+    },
+    {
+      "id": "R126-e960a7b5100b6633c338",
+      "n": 126,
+      "code": "21156223223212112115466132234445445343322332611661121322322216615442355655654544544213346556111211261665566534433445465565554334",
+      "categories": [
+        "reid"
+      ],
+      "sources": [
+        {
+          "file": "Robert Reid · The Gentle Art of Filling Space",
+          "page": 89,
+          "figure": 40
+        }
+      ],
+      "tilings": [
+        {
+          "u": [
+            12,
+            3
+          ],
+          "v": [
+            3,
+            -15
+          ],
+          "motifs": [
+            [
+              "51661222322312116611623322334354454443223166451121121232232265112433455565564544334435665566162112111655643312445445456556553244",
+              1,
+              0
+            ],
+            [
+              "11661121322322216615442355655656166166435562112333433423221122134433445465565554334211562232232343343316223544566616615655445546",
+              61,
+              1
+            ],
+            [
+              "11121126166556651221122324334333211265534661661612112115466132234445445343322332455445565166166654453226133433434544544213346556",
+              8,
+              1
+            ]
+          ],
+          "category": "reid",
+          "source": {
+            "file": "Robert Reid · The Gentle Art of Filling Space",
+            "page": 90,
+            "figure": 40
+          }
+        }
+      ]
+    }
+  ],
+  "review": [
+    {
+      "pattern": 38,
+      "page": 85,
+      "printedOrder": 60,
+      "measuredOrder": 63,
+      "status": "requires-review"
+    }
+  ]
+}

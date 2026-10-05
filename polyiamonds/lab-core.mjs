@@ -1,0 +1,18 @@
+import {DIR,cells} from './geometry.mjs?v=20f182d25fc2';
+import {codeAspects} from './search-core.mjs?v=20f182d25fc2';
+const key=p=>p.join(',');
+export function neighbors([a,b,t]){return t?[[a,b,0],[a+1,b,0],[a,b+1,0]]:[[a,b,1],[a-1,b,1],[a,b-1,1]]}
+function vertices([a,b,t]){return t?[[a+1,b+1],[a,b+1],[a+1,b]]:[[a,b],[a+1,b],[a,b+1]]}
+// Reject disconnected regions, holes and pinched boundaries rather than drawing fictitious tiles.
+export function boundary(cc){const set=new Set(cc.map(key)),seen=new Set(),queue=[cc[0]];seen.add(key(cc[0]));for(let i=0;i<queue.length;i++)for(const p of neighbors(queue[i]))if(set.has(key(p))&&!seen.has(key(p))){seen.add(key(p));queue.push(p)}if(seen.size!==cc.length)return null;
+ const edges=new Map();for(const c of cc){const vs=vertices(c);for(let i=0;i<3;i++){const a=vs[i],b=vs[(i+1)%3],k=key(a)+'/'+key(b),reverse=key(b)+'/'+key(a);if(edges.has(reverse))edges.delete(reverse);else edges.set(k,[a,b])}}
+ const next=new Map();for(const [a,b] of edges.values()){if(next.has(key(a)))return null;next.set(key(a),b)}const start=[...edges.values()][0][0];let at=start,code='';do{const b=next.get(key(at));if(!b)return null;const d=DIR.findIndex(([x,y])=>b[0]-at[0]===x&&b[1]-at[1]===y);if(d<0)return null;code+=d+1;at=b;if(code.length>edges.size)return null}while(key(at)!==key(start));return code.length===edges.size?{code,origin:start}:null}
+export function shapeKey(code){return codeAspects(code).map(a=>a.key).sort()[0]}
+export function* exploreOrder(n,{seed=1,steps=80,startCells=null}={}){if(!Number.isInteger(n)||n<2||n>200)throw Error('Escolha uma ordem entre 2 e 200.');const random=()=>{seed^=seed<<13;seed^=seed>>>17;seed^=seed<<5;return(seed>>>0)/4294967296};let C=Math.floor(Math.sqrt(n));while(n%C)C--;const A=n/C;
+ const residue=([a,b,t])=>key([((a%A)+A)%A,((b%C)+C)%C,t]);const opposite=([a,b,t])=>[A-1-a,C-1-b,1-t];let cc=[];for(let b=0;b<C;b++)for(let a=0;a<A;a++)for(let t=0;t<2;t++)if(cc.length<n)cc.push([a,b,t]);if(startCells){const residues=new Set(startCells.map(residue));if(startCells.length!==n||!boundary(startCells)||residues.size!==n||startCells.some(p=>residues.has(residue(opposite(p)))))throw Error('Contorno inválido.');cc=startCells.map(p=>[...p])}let attempts=0,accepted=0;
+ while(true){const byResidue=new Map(cc.map((p,i)=>[residue(p),i])),front=[];for(const c of cc)for(const p of neighbors(c))if(!byResidue.has(residue(p)))front.push(p);if(front.length){const add=front[Math.floor(random()*front.length)],remove=byResidue.get(residue(opposite(add)));if(remove!==undefined){const test=cc.slice();test[remove]=add;if(boundary(test)){cc=test;accepted++}}}attempts++;
+ if(attempts%steps===0){const b=boundary(cc);if(!b)throw Error('Contorno inválido.');const rotated=[...b.code].map(x=>(+x+2)%6+1).join('');const [a,c]=b.origin;yield{type:'candidate',attempts,accepted,code:b.code,n,checkpoint:cc.map(p=>[...p]),tiling:{u:[A,0],v:[0,C],motifs:[[b.code,a,c],[rotated,A-a,C-c]],category:'generated',source:{file:'Laboratório · rotação de 180°',page:0,figure:0}}};}else if(attempts%8===0)yield{type:'progress',attempts,accepted};
+ }
+}
+
+export function startingCells(n,tiling){let C=Math.floor(Math.sqrt(n));while(n%C)C--;const A=n/C;if(tiling.u[0]!==A||tiling.u[1]!==0||tiling.v[0]!==0||tiling.v[1]!==C||tiling.motifs.length!==2)return null;const [code,a,b]=tiling.motifs[0];const cc=cells(code).map(([x,y,t])=>[x+a,y+b,t]);if(cc.length!==n||!boundary(cc))return null;const residue=([x,y,t])=>key([((x%A)+A)%A,((y%C)+C)%C,t]),rr=new Set(cc.map(residue));return rr.size===n&&!cc.some(([x,y,t])=>rr.has(residue([A-1-x,C-1-y,1-t])))?cc:null}

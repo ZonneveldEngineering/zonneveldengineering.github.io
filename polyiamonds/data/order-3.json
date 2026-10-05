@@ -1,0 +1,1 @@
+[{"id":"P03-00001","n":3,"code":"12355","categories":["rot","list"],"sources":[{"file":"3-iamond-rot.ps.gz","page":1,"figure":1},{"file":"3-iamond-list.ps.gz","page":1,"figure":1}],"tilings":[{"category":"rot","source":{"file":"3-iamond-rot.ps.gz","page":1,"figure":1},"u":[0,-1],"v":[-3,1],"motifs":[["12355",-1,0],["22456",-2,0]]}]}]

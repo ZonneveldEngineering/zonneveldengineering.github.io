@@ -1,5 +1,5 @@
 /* EB Garamond hospedada no próprio site (SIL Open Font License 1.1, ver /fonts/EBGaramond-OFL.txt).
-   Fonte: google/fonts, ofl/ebgaramond (Octavio Pardo / Georg Duffner). Subconjunto latino/grego com TODOS os recursos OpenType; em 04/10/2026 as ligaturas ft e fft foram copiadas da dlig para a liga
+   Fonte: google/fonts, ofl/ebgaramond (Octavio Pardo / Georg Duffner). Subconjunto latino/grego com TODOS os recursos OpenType; em 04/10/2026 as ligaturas ft, fft e Th foram copiadas da dlig para a liga
    (liga, dlig, hlig, smcp, c2sc, onum, swsh…), eixo de peso 400–800. Substitui o carregamento pelo Google Fonts. */
 @font-face{font-family:"EB Garamond";src:url("/fonts/EBGaramond-VF.woff?v=20261004") format("woff");font-weight:400 800;font-style:normal;font-display:swap}
 @font-face{font-family:"EB Garamond";src:url("/fonts/EBGaramond-Italic-VF.woff?v=20261004") format("woff");font-weight:400 800;font-style:italic;font-display:swap}

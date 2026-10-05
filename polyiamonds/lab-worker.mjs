@@ -1,0 +1,6 @@
+import {exploreOrder,shapeKey} from './lab-core.mjs?v=20f182d25fc2';
+import {validateTiling} from './search-core.mjs?v=20f182d25fc2';
+let generator,paused=true,seen=new Set(),scheduled=false,last=0,seenLimit=10000;
+function schedule(){if(!scheduled&&!paused){scheduled=true;setTimeout(pump,0)}}
+function pump(){scheduled=false;if(paused)return;try{const end=performance.now()+25;while(performance.now()<end&&!paused){const r=generator.next().value;if(r.type==='candidate'){const k=shapeKey(r.code);if(seen.has(k))continue;if(seen.size>=seenLimit){paused=true;postMessage({type:'limit',message:'Limite de 10.000 formas nesta sessão. Inicie uma nova sessão; o histórico salvo será preservado.'});return}seen.add(k);validateTiling(r.code,r.tiling);paused=true;postMessage(r);return}if(Date.now()-last>200){postMessage(r);last=Date.now()}}schedule()}catch(e){paused=true;postMessage({type:'error',message:e.message})}}
+self.onmessage=({data})=>{if(data.type==='start'){generator=exploreOrder(data.n,data.config);seen=new Set(data.known||[]);seenLimit=seen.size+10000;paused=false;schedule()}else if(data.type==='pause'){paused=true;postMessage({type:'paused'})}else if(data.type==='resume'){paused=false;schedule()}};

@@ -1,0 +1,1 @@
+[{"id":"P01-00001","n":1,"code":"135","categories":["rot","list"],"sources":[{"file":"1-iamond-rot.ps.gz","page":1,"figure":1},{"file":"1-iamond-list.ps.gz","page":1,"figure":1}],"tilings":[{"category":"rot","source":{"file":"1-iamond-rot.ps.gz","page":1,"figure":1},"u":[-1,0],"v":[-1,1],"motifs":[["135",0,0],["246",0,0]]}]}]

@@ -30,7 +30,7 @@ body:not([data-page]),body:not([data-page]) :is(button,input,select,textarea,h1,
 .eyebrow,.manufacture-intro .breadcrumbs.eyebrow{text-transform:none;font-variant-caps:all-small-caps;font-size:19px;letter-spacing:.1em}
 
 /* 04/10/2026 (pedido de Daniel): nas páginas da Zonneveld Engineering (home, Impressum, Datenschutz, vídeos)
-   só ligaturas comuns: fi, fl, ff, ffi, ffl e ft/fft (estas copiadas para a "liga" da EB Garamond local).
-   Sem ligaturas discricionárias/históricas (ct, st, Th, ſ…). Na Manufactura (data-page="manufactura" e páginas
+   só ligaturas comuns: fi, fl, ff, ffi, ffl, ft/fft e Th (estas três copiadas para a "liga" da EB Garamond local).
+   Sem ligaturas discricionárias/históricas (ct, st, ſ…). Na Manufactura (data-page="manufactura" e páginas
    independentes do ateliê, sem data-page) continua a regra completa de style.css, com dlig. */
 body[data-page]:not([data-page="manufactura"]),body[data-page]:not([data-page="manufactura"]) *{font-variant-ligatures:common-ligatures contextual no-discretionary-ligatures no-historical-ligatures;font-feature-settings:"liga" 1,"clig" 1,"dlig" 0,"hlig" 0,"calt" 1}

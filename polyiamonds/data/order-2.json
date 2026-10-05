@@ -1,0 +1,1 @@
+[{"id":"P02-00001","n":2,"code":"1245","categories":["trans","list"],"sources":[{"file":"2-iamond-trans.ps.gz","page":1,"figure":1},{"file":"2-iamond-list.ps.gz","page":1,"figure":1}],"tilings":[{"category":"trans","source":{"file":"2-iamond-trans.ps.gz","page":1,"figure":1},"u":[1,-1],"v":[-1,0],"motifs":[["1245",0,0]]}]}]
