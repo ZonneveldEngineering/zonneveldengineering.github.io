@@ -13,14 +13,17 @@ while((m=re.exec(t))){if(m.index>i)f.append(t.slice(i,m.index));const s=document
 if(i<t.length)f.append(t.slice(i));n.replaceWith(f)}}
 function siteLegalLine(l){return `<p class="legal-line"><span>${siteUpdatedYear}</span><span aria-hidden="true">·</span><span>${siteCompany}</span><span aria-hidden="true">·</span><a href="${siteLangPath(l,'/impressum/')}">Impressum</a><span aria-hidden="true">·</span><a href="${siteLangPath(l,'/datenschutz/')}">${sitePrivacyLabel[l]}</a></p>`}
 const supported=['en','pt','es','de'];
-/* 05/10/2026: páginas da Zonneveld Engineering (home, Impressum, Datenschutz) têm um endereço por idioma:
-   inglês na raiz (/, /impressum/, /datenschutz/) e /pt/, /es/, /de/ com o mesmo caminho. O idioma dessas páginas vem do
-   endereço (body data-lang). Trocar o idioma nelas leva à mesma página no outro idioma. A Manufactura e o arquivo de
-   vídeos continuam com um endereço só e troca de idioma no próprio lugar. */
+/* 05/10/2026: endereço por idioma. Inglês na raiz; /pt/, /es/, /de/ com o mesmo caminho.
+   Vale para home, Impressum, Datenschutz (body data-lang) e para toda a Manufactura (idioma lido do prefixo do endereço;
+   cópias /pt|es|de/manufactura/… são arquivos *.pt|es|de.html na raiz, gerados por Ferramentas/build_i18n_manufactura.py).
+   Trocar o idioma leva à mesma página (e mesmos ?parâmetros/#âncora) no outro idioma. O arquivo de vídeos (/19/…)
+   continua com um endereço só e troca de idioma no próprio lugar. Links internos /manufactura/… e / são prefixados. */
 const siteLangPrefix={en:'',pt:'/pt',es:'/es',de:'/de'};
 function siteBasePath(p){return p.replace(/^\/(pt|es|de)(?=\/|$)/,'')||'/'}
 function siteLangPath(l,p){return (siteLangPrefix[l]||'')+siteBasePath(p)}
-const pageLang=supported.includes(document.body.dataset.lang)?document.body.dataset.lang:null;
+const sitePathLang=(location.pathname.match(/^\/(pt|es|de)(?=\/)/)||[])[1];
+const pageLang=supported.includes(document.body.dataset.lang)?document.body.dataset.lang:(document.body.dataset.page==='manufactura'?(sitePathLang||'en'):null);
+function siteLocalizeLinks(root){if(!pageLang||lang==='en'||!root||!root.querySelectorAll)return;const fix=a=>{const h=a.getAttribute('href');if(h&&(h==='/'||/^\/manufactura(\/|$|\?|#)/.test(h)))a.setAttribute('href',siteLangPath(lang,h))};if(root.matches&&root.matches('a[href]'))fix(root);root.querySelectorAll('a[href]').forEach(fix)}
 let saved;try{saved=localStorage.getItem('ze-language')}catch{}
 let lang=pageLang||(supported.includes(saved)?saved:(navigator.languages||[navigator.language]).map(x=>x.toLowerCase().split('-')[0]).find(x=>supported.includes(x))||'en');
 if(pageLang&&pageLang!=='en'){try{localStorage.setItem('ze-language',pageLang)}catch{}}
@@ -36,5 +39,6 @@ const videoPage=page==='home'?'':page==='manufactura'?manufacturaView(lang,t):pa
 document.body.innerHTML=header+(page!=='home'?videoPage:homepage)+(page==='home'?'':`<footer><div class="wrap footer-inner"><span class="footer-name">Zonneveld Engineering</span><small>© ${siteUpdatedYear} Daniel Zonneveld · <a href="${siteLangPath(lang,'/impressum/')}">Impressum</a> · <a href="${siteLangPath(lang,'/datenschutz/')}">${sitePrivacyLabel[lang]}</a></small><a href="${home}">${page!=='home'?'← '+t.home:t.top+' ↑'}</a></div></footer>`);
 siteCapsify(document.querySelector('main'));siteCapsify(document.querySelector('footer'));siteCapsify(document.querySelector('.legal-line'));
 if(page==='manufactura'){document.title=manufacturaCurrent().title==='Zonneveld Manufactura'?'Zonneveld Manufactura':manufTitle(document.body.dataset.path,lang)+' — Zonneveld Manufactura';setupManufactura();}
-document.querySelector('.language').addEventListener('change',e=>{const next=e.target.value;try{localStorage.setItem('ze-language',next)}catch{}if(pageLang){location.href=siteLangPath(next,location.pathname)+location.hash;return}lang=next;render();document.querySelector('.language').focus()});}
+document.querySelector('.language').addEventListener('change',e=>{const next=e.target.value;try{localStorage.setItem('ze-language',next)}catch{}if(pageLang){location.href=siteLangPath(next,location.pathname)+location.search+location.hash;return}lang=next;render();document.querySelector('.language').focus()});}
 render();
+if(pageLang&&lang!=='en'){siteLocalizeLinks(document.body);new MutationObserver(ms=>{for(const m of ms)for(const n of m.addedNodes)if(n.nodeType===1)siteLocalizeLinks(n)}).observe(document.body,{childList:true,subtree:true})}
