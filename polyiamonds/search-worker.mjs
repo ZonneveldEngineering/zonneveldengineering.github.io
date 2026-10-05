@@ -1,4 +1,4 @@
-import{searchTilings,canonical}from'./search-core.mjs?v=e12bec2b718e';
+import{searchTilings,canonical}from'./search-core.mjs?v=a24c21ddc48f';
 let generator,seen,finished=false,paused=false,waiting=false,scheduled=false,last=0;
 function schedule(){if(!scheduled&&!finished&&!paused&&!waiting){scheduled=true;setTimeout(advance,0)}}
 self.onmessage=({data})=>{if(data.type==='start'){seen=new Set(data.known);generator=searchTilings(data.code,data.config);finished=false;paused=false;waiting=false;schedule()}else if(data.type==='pause'){paused=true;postMessage({type:'paused'})}else if(data.type==='resume'){paused=false;schedule()}else if(data.type==='continue'){waiting=false;schedule()}};

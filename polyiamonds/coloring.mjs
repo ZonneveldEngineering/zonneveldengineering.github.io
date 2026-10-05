@@ -1,4 +1,4 @@
-import {polygon} from './geometry.mjs?v=e12bec2b718e';
+import {polygon} from './geometry.mjs?v=a24c21ddc48f';
 // Exact integer vertices and unit boundary edges: no floating-point proximity tests.
 export function adjacency(tiles,corners=false){const graph=tiles.map(()=>new Set()),owners=new Map();tiles.forEach((tile,i)=>{const p=polygon(tile.code).map(([a,b])=>`${a+tile.a},${b+tile.b}`),keys=new Set();for(let j=0;j<p.length;j++){const u=p[j],v=p[(j+1)%p.length];keys.add(u<v?`e${u}/${v}`:`e${v}/${u}`);if(corners)keys.add(`v${u}`)}for(const k of keys){const previous=owners.get(k)||[];for(const j of previous){graph[i].add(j);graph[j].add(i)}previous.push(i);owners.set(k,previous)}});return graph}
 // DSATUR with a lazy heap. Extra colors are allowed rather than shipping conflicts.

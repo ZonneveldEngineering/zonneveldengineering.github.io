@@ -1,7 +1,10 @@
-import {canonical} from './search-core.mjs?v=e12bec2b718e';
+import {canonical} from './search-core.mjs?v=a24c21ddc48f';
 export const sha=async s=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s))),b=>b.toString(16).padStart(2,'0')).join('');
 export const shortPiece=id=>id.startsWith('L')?id.slice(0,25):id;
 const ids=new WeakMap();
 export function patternId(t){if(!ids.has(t))ids.set(t,Promise.resolve(t.fingerprint||sha(canonical(t))));return ids.get(t)}
 export async function alternatives(x){const seen=new Set(),out=[];for(const t of x.tilings){const id=await patternId(t);if(seen.has(id))continue;seen.add(id);out.push({tiling:t,id,ref:`${shortPiece(x.id)} / T-${id.slice(0,20)}`})}return out}
 export function mergeCatalogue(base,entries,n){const items=base.map(x=>({...x,categories:[...x.categories],tilings:[...x.tilings]})),byId=new Map(items.map(x=>[x.id,x]));for(const e of entries){const order=+(e.pieceId.startsWith('L')?e.pieceId.slice(1,4):e.pieceId.slice(1,3));if(order!==n)continue;let x=byId.get(e.pieceId);if(!x){if(!e.tiling.prototype)continue;x={id:e.pieceId,n,code:e.tiling.prototype,categories:['experimental'],sources:[],tilings:[]};items.push(x);byId.set(x.id,x)}if(!x.categories.includes('generated'))x.categories.push('generated');if(!x.tilings.some(t=>t.fingerprint===e.fingerprint))x.tilings.push({...e.tiling,fingerprint:e.fingerprint,createdAt:e.createdAt,published:e.published})}return items}
+// Junta as receitas publicadas ao catálogo da ordem; uma peça que já existe completa
+// (por exemplo, no histórico deste navegador) prevalece sobre a receita equivalente.
+export function addRecipes(items,recipes){if(!recipes?.length)return items;const have=new Set(items.filter(x=>x.id.startsWith('L')).map(x=>x.id.slice(0,25)));return[...items,...recipes.filter(x=>!have.has(x.id))]}

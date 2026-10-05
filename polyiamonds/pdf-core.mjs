@@ -1,5 +1,5 @@
-import {colorTiles} from './coloring.mjs?v=e12bec2b718e';
-import {placements,path,grid,xy,palettes} from './geometry.mjs?v=e12bec2b718e';
+import {colorTiles} from './coloring.mjs?v=a24c21ddc48f';
+import {placements,path,grid,xy,palettes} from './geometry.mjs?v=a24c21ddc48f';
 const encoder=new TextEncoder(),mm=72/25.4;
 const number=n=>Number(n.toFixed(4));
 // WinAnsi core font text, hex encoded so accents and delimiters are unambiguous.

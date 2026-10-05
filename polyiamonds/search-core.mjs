@@ -1,4 +1,4 @@
-import {cells,polygon,DIR} from './geometry.mjs?v=e12bec2b718e';
+import {cells,polygon,DIR} from './geometry.mjs?v=a24c21ddc48f';
 const mod=(x,n)=>((x%n)+n)%n;
 const cmp=(a,b)=>a[0]-b[0]||a[1]-b[1];
 const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);

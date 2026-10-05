@@ -1,5 +1,5 @@
-import {DIR,cells} from './geometry.mjs?v=e12bec2b718e';
-import {codeAspects} from './search-core.mjs?v=e12bec2b718e';
+import {DIR,cells} from './geometry.mjs?v=a24c21ddc48f';
+import {codeAspects} from './search-core.mjs?v=a24c21ddc48f';
 const key=p=>p.join(',');
 export function neighbors([a,b,t]){return t?[[a,b,0],[a+1,b,0],[a,b+1,0]]:[[a,b,1],[a-1,b,1],[a,b-1,1]]}
 function vertices([a,b,t]){return t?[[a+1,b+1],[a,b+1],[a+1,b]]:[[a,b],[a+1,b],[a,b+1]]}

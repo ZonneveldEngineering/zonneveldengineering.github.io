@@ -2,7 +2,13 @@
 // de simetria periódico da malha triangular. Por construção as cópias da peça cobrem
 // o plano sem lacunas nem sobreposições; ainda assim cada tesselação é validada.
 // Explora famílias isoédricas (uma classe de peças), não todas as formas possíveis.
-import {boundary,neighbors} from './lab-core.mjs?v=e12bec2b718e';
+//
+// VERSÃO CONGELADA 'forge-1'. A base publicada guarda só receitas (semente da sessão +
+// número da tentativa) e redesenha as peças com este código. Qualquer mudança que altere
+// o resultado de attemptAt() invalida receitas antigas: crie forge-2 em outro módulo.
+// Só aritmética exata (+ − × ÷ √, inteiros): nada de exp/hypot/sin, que variam entre navegadores.
+import {boundary,neighbors} from './lab-core.mjs?v=a24c21ddc48f';
+export const GENERATOR='forge-1';
 const mod=(x,n)=>((x%n)+n)%n;
 const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);
 // Transformações de D6 sobre coordenadas de pontos em terços (centroides dos triângulos).
@@ -45,6 +51,8 @@ function latticesFor(D,mats){const key=D+'|'+mats.map(m=>m.join(':')).join(',');
 function closeGroup(L3,gens,order){const key=g=>`${g.k},${g.m},${hnf(L3,g.s).join(',')}`;const els=new Map([['0,0,0,0',{k:0,m:0,s:[0,0]}]]),queue=[...els.values()],byT=new Map([['0,0','0,0']]);
  for(let i=0;i<queue.length;i++){for(const g of gens){const a=queue[i];const[k,m]=tcomp(g.k,g.m,a.k,a.m);const t=T(a.s,g.k,g.m);const s=hnf(L3,[t[0]+g.s[0],t[1]+g.s[1]]);const e={k,m,s};const kk=key(e);if(els.has(kk))continue;const tk=k+','+m;if(byT.has(tk))return null;byT.set(tk,s.join(','));els.set(kk,e);queue.push(e);if(els.size>order)return null}}
  return els.size===order?[...els.values()]:null}
+// Semente independente por tentativa: qualquer tentativa pode ser refeita diretamente.
+export function attemptSeed(seed,i){let h=Math.imul((seed>>>0)^0x9e3779b9,0x85ebca6b)^Math.imul((i>>>0)+1,0xc2b2ae35);h^=h>>>16;h=Math.imul(h,0x7feb352d);h^=h>>>15;h=Math.imul(h,0x846ca68b);h^=h>>>16;return(h>>>0)||1}
 export function makeRandom(seed){seed=(seed>>>0)||1;return()=>{seed^=seed<<13;seed^=seed>>>17;seed^=seed<<5;return(seed>>>0)/4294967296}}
 const point=([a,b,t])=>[3*a+1+t,3*b+1+t];
 function cellOf([x,y]){const a=Math.floor((x-1)/3),t=x-3*a-1,b=(y-1-t)/3;return[a,b,t]}
@@ -76,7 +84,7 @@ export function growRegion(n,G,random,mode='mixed'){const cells=[],orbitUsed=new
   if(m==='arms'&&random()<stick){const near=neighbors(last).filter(q=>front.has(k(q))&&!orbitUsed.has(orbitKey(G,point(q))));
    // Prolonga o braço atual; às vezes recomeça em outro ponto da fronteira.
    pick=near.length?near[Math.floor(random()*near.length)]:cand[Math.floor(random()*cand.length)]}
-  else if(m==='compact'){let total=0;const w=cand.map(q=>{const[x,y]=centroidXY(q);const v=Math.exp(-temp*Math.hypot(x-cx,y-cy));total+=v;return v});let r=random()*total;pick=cand[cand.length-1];for(let i=0;i<cand.length;i++){r-=w[i];if(r<=0){pick=cand[i];break}}}
+  else if(m==='compact'){let total=0;const w=cand.map(q=>{const[x,y]=centroidXY(q);const d2=(x-cx)*(x-cx)+(y-cy)*(y-cy),q2=1/(1+temp*temp*d2),v=q2*q2*q2;total+=v;return v});let r=random()*total;pick=cand[cand.length-1];for(let i=0;i<cand.length;i++){r-=w[i];if(r<=0){pick=cand[i];break}}}
   else pick=cand[Math.floor(random()*cand.length)];
   cells.push(pick);inRegion.add(k(pick));front.delete(k(pick));orbitUsed.add(orbitKey(G,point(pick)));addFront(pick);last=pick;const[x,y]=centroidXY(pick);cx+=(x-cx)/cells.length;cy+=(y-cy)/cells.length}
  return cells}
@@ -91,12 +99,19 @@ export function cellsShapeKey(cells){let best=null;for(const m of[0,1])for(let k
 // Monta a tesselação no formato do catálogo: reticulado u,v e um motivo por elemento do grupo.
 export function buildTiling(cells,G){const motifs=[];let prototype=null;for(const g of G.group){const img=cells.map(c=>cellOf(apply(g,point(c))));const b=boundary(img);if(!b)return null;if(!g.k&&!g.m&&!g.s[0]&&!g.s[1])prototype=b.code;motifs.push([b.code,b.origin[0],b.origin[1]])}
  return{prototype,tiling:{u:[G.L[0],0],v:[G.L[1],G.L[2]],motifs,category:'generated',source:{file:'Gerador · '+FAMILIES[G.family].label,page:0,figure:0}}}}
-export function* forge(options){const{nMin,nMax,style='interlock',symmetry='varied',seed=1}=options;const random=makeRandom(seed),st=STYLES[style]||STYLES.interlock,fams=SYMMETRIES[symmetry]||SYMMETRIES.varied;let attempts=0,grown=0;
- while(true){attempts++;const n=nMin+Math.floor(random()*(nMax-nMin+1)),family=fams[Math.floor(random()*fams.length)];const G=pickGroup(n,family,random);if(!G){yield{type:'tick',attempts,grown};continue}
-  const mode=st.modes[Math.floor(random()*st.modes.length)],cells=growRegion(n,G,random,mode);if(!cells||!boundary(cells)){yield{type:'tick',attempts,grown};continue}grown++;
-  const metrics=shapeMetrics(cells);if(metrics.solidity<st.solidity[0]||metrics.solidity>st.solidity[1]||metrics.elongation>st.elongation||metrics.teeth>st.teeth){yield{type:'tick',attempts,grown};continue}
-  const built=buildTiling(cells,G);if(!built){yield{type:'tick',attempts,grown};continue}
-  yield{type:'candidate',attempts,grown,n,family,cells,key:cellsShapeKey(cells),code:built.prototype,tiling:built.tiling,metrics}}}
+export const FAMILY_LIST=['p2','p3','p6','pg','pgg','p31m','p6m'];
+// Uma tentativa determinística: (sessão, i) → região crescida ou null.
+export function attemptAt(session,i){const{nMin,nMax,style='interlock',symmetry='varied',seed}=session,random=makeRandom(attemptSeed(seed,i)),st=STYLES[style]||STYLES.interlock,fams=SYMMETRIES[symmetry]||SYMMETRIES.varied;
+ const n=nMin+Math.floor(random()*(nMax-nMin+1)),family=fams[Math.floor(random()*fams.length)],G=pickGroup(n,family,random);if(!G)return null;
+ const mode=st.modes[Math.floor(random()*st.modes.length)],cells=growRegion(n,G,random,mode);if(!cells||!boundary(cells))return null;return{n,family,G,cells}}
+// Refaz a peça de uma receita (usado ao exibir, exportar e incorporar).
+export function regenerate(session,i){const a=attemptAt(session,i);if(!a)return null;const b=buildTiling(a.cells,a.G);if(!b)return null;return{n:a.n,family:a.family,cells:a.cells,code:b.prototype,tiling:b.tiling,key:cellsShapeKey(a.cells)}}
+// Percorre tentativas start, start+step, … (um worker por núcleo, sem sobreposição).
+export function* forge(options){const{start=0,step=1}=options,st=STYLES[options.style]||STYLES.interlock;let attempts=0,grown=0;
+ for(let i=start;;i+=step){attempts++;const a=attemptAt(options,i);if(!a){yield{type:'tick',attempts,grown};continue}grown++;
+  const metrics=shapeMetrics(a.cells);if(metrics.solidity<st.solidity[0]||metrics.solidity>st.solidity[1]||metrics.elongation>st.elongation||metrics.teeth>st.teeth){yield{type:'tick',attempts,grown};continue}
+  const built=buildTiling(a.cells,a.G);if(!built){yield{type:'tick',attempts,grown};continue}
+  yield{type:'candidate',attempt:i,attempts,grown,n:a.n,family:a.family,cells:a.cells,key:cellsShapeKey(a.cells),code:built.prototype,tiling:built.tiling,metrics}}}
 export{gcd}
 // Pontuação heurística para escolher a melhor peça de cada lote: braços largos, poucos dentes,
 // pouca elongação e mais orientações no mosaico. Critério visual ajustável, não matemático.
