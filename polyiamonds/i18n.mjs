@@ -1,4 +1,4 @@
-import {translations} from './translations.mjs?v=20f182d25fc2';
+import {translations} from './translations.mjs?v=e12bec2b718e';
 const clean=s=>s.replace(/\s+/g,' ').trim(),escape=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const patterns=Object.keys(translations).filter(k=>k.includes('{')).map(k=>({k,re:new RegExp('^'+k.split(/(\{\d+\})/).map(p=>/^\{\d+\}$/.test(p)?'(.+?)':escape(p)).join('')+'$')}));
 const originals=new WeakMap(),attrs=new WeakMap();let observed,observer;export const unknown=new Set();

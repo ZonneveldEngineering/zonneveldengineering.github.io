@@ -1,4 +1,4 @@
-import {canonical} from './search-core.mjs?v=20f182d25fc2';
+import {canonical} from './search-core.mjs?v=e12bec2b718e';
 export const sha=async s=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s))),b=>b.toString(16).padStart(2,'0')).join('');
 export const shortPiece=id=>id.startsWith('L')?id.slice(0,25):id;
 const ids=new WeakMap();

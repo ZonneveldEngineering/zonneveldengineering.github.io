@@ -1,4 +1,4 @@
-import {colorTiles} from './coloring.mjs?v=20f182d25fc2';
+import {colorTiles} from './coloring.mjs?v=e12bec2b718e';
 export const H=Math.sqrt(3)/2;
 export const DIR=[[1,-1],[1,0],[0,1],[-1,1],[-1,0],[0,-1]];
 export function polygon(code){let a=0,b=0;return [...code].map(c=>{const p=[a,b];a+=DIR[+c-1][0];b+=DIR[+c-1][1];return p})}
