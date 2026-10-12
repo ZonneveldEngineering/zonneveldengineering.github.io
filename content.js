@@ -7,6 +7,69 @@ de:{nav:['Erfahrung','Über mich','Kontakt'],skip:'Zum Inhalt',tag:'Ingenieurwes
 
 const videos = [
 {
+  "id": "AN69mwThwEg",
+  "startDate": "2026-09-28",
+  "endDate": "2026-09-30",
+  "title": {
+    "en": "River Tyne · North-West View",
+    "pt": "Rio Tyne · Vista noroeste",
+    "es": "Río Tyne · Vista noroeste",
+    "de": "River Tyne · Nordwestansicht"
+  },
+  "description": {
+    "en": "Timelapse from WIND ORCA, more than 80 metres above the water, looking north-west across the River Tyne: sunset, night and fog, the vehicle export terminal, the arrival and loading of the car carrier CITY OF ST. PETERSBURG and the vessel's legs during jacking.",
+    "pt": "Timelapse a partir do WIND ORCA, a mais de 80 metros acima da água, com vista noroeste sobre o Rio Tyne: pôr do sol, noite e neblina, o terminal de exportação de veículos, a chegada e o carregamento do navio de veículos CITY OF ST. PETERSBURG e as pernas da embarcação durante o jacking.",
+    "es": "Timelapse desde el WIND ORCA, a más de 80 metros sobre el agua, con vista noroeste sobre el río Tyne: atardecer, noche y niebla, la terminal de exportación de vehículos, la llegada y la carga del buque portavehículos CITY OF ST. PETERSBURG y las patas del buque durante el jacking.",
+    "de": "Zeitraffer von der WIND ORCA aus mehr als 80 Metern Höhe mit Blick nach Nordwesten über den River Tyne: Sonnenuntergang, Nacht und Nebel, das Fahrzeug-Exportterminal, Ankunft und Beladung des Autotransporters CITY OF ST. PETERSBURG und die Beine des Schiffs beim Aufjacken."
+  },
+  "loadout": 7,
+  "executionHours": null,
+  "orientation": "landscape",
+  "aspectRatio": "16/9"
+},
+{
+  "id": "WSc_ESLuTvQ",
+  "startDate": "2026-09-20",
+  "endDate": "2026-09-23",
+  "title": {
+    "en": "River Tyne · South-East View",
+    "pt": "Rio Tyne · Vista sudeste",
+    "es": "Río Tyne · Vista sureste",
+    "de": "River Tyne · Südostansicht"
+  },
+  "description": {
+    "en": "View across the River Tyne from WIND ORCA, with vessel movements, loading operations and the changing weather between day and night.",
+    "pt": "Vista do Rio Tyne a partir do WIND ORCA, com movimentação de embarcações, operações de carregamento e mudanças do tempo entre o dia e a noite.",
+    "es": "Vista del río Tyne desde el WIND ORCA, con movimiento de embarcaciones, operaciones de carga y cambios del tiempo entre el día y la noche.",
+    "de": "Blick von der WIND ORCA über den River Tyne mit Schiffsbewegungen, Verladearbeiten und wechselndem Wetter bei Tag und Nacht."
+  },
+  "loadout": 7,
+  "executionHours": null,
+  "orientation": "landscape",
+  "aspectRatio": "16/9"
+},
+{
+  "id": "qdqI5IYfppk",
+  "startDate": "2026-09-23",
+  "endDate": "2026-09-28",
+  "title": {
+    "en": "Main Crane Wire Rope Replacement",
+    "pt": "Troca do cabo de aço do guindaste principal",
+    "es": "Cambio del cable de acero de la grúa principal",
+    "de": "Drahtseilwechsel am Hauptkran"
+  },
+  "description": {
+    "en": "Replacement of the main crane wire rope at the Port of Tyne: preparation, messenger-rope deployment, removal of the existing wire rope, drum changeovers and reeving of the new wire rope.",
+    "pt": "Troca do cabo de aço do guindaste principal no Porto de Tyne: preparação, passagem do cabo-guia, retirada do cabo existente, troca de tambores e passagem do novo cabo.",
+    "es": "Cambio del cable de acero de la grúa principal en el Puerto de Tyne: preparación, tendido del cabo guía, retirada del cable existente, cambio de tambores y paso del nuevo cable.",
+    "de": "Drahtseilwechsel am Hauptkran im Port of Tyne: Vorbereitung, Einziehen des Vorläuferseils, Ausbau des vorhandenen Drahtseils, Trommelwechsel und Einscheren des neuen Seils."
+  },
+  "loadout": 7,
+  "executionHours": null,
+  "orientation": "landscape",
+  "aspectRatio": "16/9"
+},
+{
   "id": "huK7FUDGk1A",
   "loadout": 7,
   "startDate": "2026-09-17",
